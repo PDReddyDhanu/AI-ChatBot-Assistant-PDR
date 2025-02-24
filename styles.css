@@ -1,0 +1,202 @@
+/* New Theme CSS */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa;
+    /* Light gray background */
+    color: #343a40;
+    /* Dark gray text */
+    min-height: 100vh;
+    /* Ensure the body takes up the full screen height */
+}
+
+section {
+    display: flex;
+    /* Center the content vertically and horizontally */
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 2rem);
+    /* Adjust for padding on body */
+    padding: 1rem;
+}
+
+.chat-card {
+    border-radius: 15px;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.05);
+    /* Subtle shadow */
+    background-color: #fff;
+    border: 1px solid #e9ecef;
+    width: 100%;
+    /* Occupy full width within its container */
+    max-width: 800px;
+    /* Set a maximum width to prevent excessive stretching on large screens */
+}
+
+.card-header {
+    background-color: #007bff;
+    /* Primary blue */
+    color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.125);
+    border-radius: 14px 14px 0 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.gradient-heading {
+    background: linear-gradient(90deg, #ffffff, #b6e0fe);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.card-body {
+    background-color: #f8f9fa;
+    height: 400px;
+    overflow-y: auto;
+    /* Make the chat area scrollable */
+    padding: 1rem;
+    /* Standardized padding */
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 0.5rem;
+    /* Use rem for scalable spacing */
+    border: 2px solid #007bff;
+}
+
+.message-container {
+    margin-bottom: 0.75rem;
+    /* Use rem for scalable spacing */
+    display: flex;
+    align-items: flex-start;
+    /* Align items to the top */
+}
+
+.user-message {
+    background-color: #007bff;
+    /* Lighter blue for user messages */
+    color: white;
+    border-radius: 1rem;
+    /* Use rem for scalable border radius */
+    padding: 0.5rem 0.75rem;
+    /* Use rem for scalable padding */
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.ai-message {
+    background-color: #e2f4ff;
+    /* Very light blue for AI messages */
+    color: #343a40;
+    border-radius: 1rem;
+    /* Use rem for scalable border radius */
+    padding: 0.5rem 0.75rem;
+    /* Use rem for scalable padding */
+    max-width: 70%;
+    word-wrap: break-word;
+}
+
+.message-time {
+    font-size: 0.75rem;
+    color: #6c757d;
+    margin-top: 0.25rem;
+    /* Add some space above the time */
+}
+
+.card-footer {
+    background-color: #fff;
+    border-top: 1px solid #e9ecef;
+    border-radius: 0 0 14px 14px;
+    padding: 0.75rem;
+    display: flex;
+    align-items: center;
+
+}
+
+.form-control {
+    border-radius: 25px;
+    border: 1px solid #ced4da;
+    padding: 0.5rem 0.75rem;
+    /* Use rem for scalable padding */
+    flex-grow: 1;
+    margin-right: 0.5rem;
+    /* Spacing between input and button */
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    border-radius: 25px;
+    padding: 0.5rem 1rem;
+    /* Use rem for scalable padding */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 768px) {
+    .chat-card {
+        margin: 0.5rem;
+        /* Add some margin on smaller screens */
+    }
+
+    .card-body {
+        height: 300px;
+        /* Reduce height on smaller screens */
+    }
+
+    .avatar {
+        width: 30px;
+        height: 30px;
+    }
+
+    .user-message,
+    .ai-message {
+        max-width: 85%;
+        /* Allow messages to take up more space on smaller screens */
+    }
+
+    .social-links {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .social-links a {
+        margin-bottom: 0.5rem;
+    }
+}
+
+.d-flex.flex-row {
+    animation: slideIn 0.3s ease forwards;
+}
+
+/* Social Links Styles */
+.social-links {
+    display: flex;
+    gap: 1rem;
+    /* Adjust as needed */
+}
+
+.social-links a {
+    color: #fff;
+    /* Link color */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #b6e0fe;
+    /* Hover color */
+}
+
+.links {
+    padding-right: 10px;
+}
