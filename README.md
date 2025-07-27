@@ -103,6 +103,7 @@ You can deploy this app on any static hosting service (e.g., Netlify, Vercel, Gi
 
 ---
 
-## License
-
-This project is open source and available under the [MIT License](LICENSE). 
+## Connect with Me
+- **GitHub:** [PDReddyDhanu](https://github.com/PDReddyDhanu)
+- **LinkedIn:** [Dhanunjay Reddy Palakolanu](https://www.linkedin.com/in/dhanunjay-reddy-palakolanu-pdr/)
+- **Instagram:** [p.d.reddy_dhanu04_08](https://www.instagram.com/p.d.reddy_dhanu04_08/)
