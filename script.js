@@ -91,3 +91,38 @@ async function aiResponse(inputChat) {
         return "An error occurred while getting the response.";
     }
 }
+
+// Dark mode toggle logic
+const darkModeToggle = document.getElementById('darkModeToggle');
+const darkModeIcon = document.getElementById('darkModeIcon');
+
+function setDarkMode(enabled) {
+    if (enabled) {
+        document.body.classList.add('dark-mode');
+        if (darkModeIcon) {
+            darkModeIcon.classList.remove('bi-moon-stars');
+            darkModeIcon.classList.add('bi-sun');
+        }
+        localStorage.setItem('darkMode', 'true');
+    } else {
+        document.body.classList.remove('dark-mode');
+        if (darkModeIcon) {
+            darkModeIcon.classList.remove('bi-sun');
+            darkModeIcon.classList.add('bi-moon-stars');
+        }
+        localStorage.setItem('darkMode', 'false');
+    }
+}
+
+if (darkModeToggle) {
+    darkModeToggle.addEventListener('click', function() {
+        const isDark = document.body.classList.contains('dark-mode');
+        setDarkMode(!isDark);
+    });
+}
+
+// On page load, set dark mode from localStorage
+window.addEventListener('DOMContentLoaded', function() {
+    const darkPref = localStorage.getItem('darkMode');
+    setDarkMode(darkPref === 'true');
+});

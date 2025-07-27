@@ -30,6 +30,10 @@
                                     class="links"><i class="bi bi-instagram" style="font-size: 1.5rem;"></i></a>
                                 <a href="https://www.youtube.com/@pdreddy" target="_blank" class="links"><i
                                         class="bi bi-youtube" style="font-size: 1.5rem;"></i></a>
+                                <button id="darkModeToggle" class="btn btn-outline-light ms-2" aria-label="Toggle dark mode" style="border-radius:50%;padding:0.3rem 0.5rem;display:inline-flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.12);border:none;">
+                                    <span class="visually-hidden">Toggle dark mode</span>
+                                    <i class="bi bi-moon-stars" id="darkModeIcon" style="font-size:1.4rem;"></i>
+                                </button>
                             </div>
                         </div>
                         <div class="card-body" style="position: relative;">
@@ -41,7 +45,13 @@
                             <img src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" alt="user-avatar"
                                 class="avatar">
                             <input type="text" class="form-control" id="inputChat" placeholder="Ask me anything...">
-                            <button type="button" class="btn btn-primary m-1" onclick="send()">Chat</button>
+                            <button type="button" class="btn btn-primary m-1" onclick="send()" aria-label="Send message">
+    <svg id="sendIcon" width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" style="vertical-align: middle;">
+        <path d="M2 21L23 12L2 3V10L17 12L2 14V21Z" fill="currentColor">
+            <animate attributeName="opacity" values="0.7;1;0.7" dur="1.2s" repeatCount="indefinite"/>
+        </path>
+    </svg>
+</button>
                         </div>
                     </div>
                 </div>
